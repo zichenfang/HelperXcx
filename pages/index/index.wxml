@@ -2,5 +2,8 @@
     <button class='buttonBorderLine'>请选择所在行业</button>
   </view>
   <view style='height:60px;background:#FFFFFF;text-align:center;'>
-    <button class='buttonBorderLine'>请选择投资目的国家</button>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <!-- <view > 当前选择：{{array[index]}} </view> -->
+    <button class='buttonBorderLine'>请选择所在行业  {{array[index]}}</button>
+    </picker>
   </view>

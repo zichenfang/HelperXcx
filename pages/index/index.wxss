@@ -1,9 +1,9 @@
 .buttonBorderLine{
   width:200px;
-  height:50px;
+  height:40px;
   text-align:center;
   vertical-align:middle;
-  font-size:80%;
+  font-size:100%;
 }
 .buttonBorderLin1{
   width:200px;
