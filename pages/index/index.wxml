@@ -1,9 +1,22 @@
   <view style='height:60px;background:#FFFFFF;text-align:center;'>
-    <button class='buttonBorderLine'>请选择所在行业</button>
+    <picker bindchange="selectIndustry" value="{{index}}" range="{{industries}}">
+      <button class='buttonBorderLine'>{{selectedIndustryName?selectedIndustryName:'请选择所在行业'}}</button>
+    </picker>
   </view>
   <view style='height:60px;background:#FFFFFF;text-align:center;'>
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <!-- <view > 当前选择：{{array[index]}} </view> -->
-    <button class='buttonBorderLine'>请选择所在行业  {{array[index]}}</button>
+    <picker bindchange="selectCountry" value="{{index}}" range="{{countries}}">
+      <button class='buttonBorderLine'>{{selectedCountryName?selectedCountryName:'请选择投资目的国家'}}</button>
     </picker>
+  </view>
+
+  <view style='height:160px;background:#FFFFFF;text-align:center;'>
+      <button class='buttonDarkBackGround' bindtap='goPolicyList' disabled="{{!selectedIndustryName||!selectedCountryName}}">获取相关政策</button>
+  </view>
+
+   <view style='height:60px;background:#FFFFFF;text-align:center;'>
+      <button class='buttonBorderLine' bindtap='goCustomAdvice'>定制免费的投资建议书</button>
+  </view>
+
+   <view style='height:60px;background:#FFFFFF;text-align:center;'>
+      <button class='buttonBorderLine' bindtap='goService'>我们提供的服务</button>
   </view>
